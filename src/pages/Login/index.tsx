@@ -6,46 +6,33 @@ export const Login =() =>{
     const auth = useContext(AuthContext);
     const navigate = useNavigate();
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [key, setKey] = useState('');
 
-    const handleEmailInput = (event: ChangeEvent<HTMLInputElement>) =>{
-        setEmail(event.target.value);
-    }
-    const handlePasswordInput = (event: ChangeEvent<HTMLInputElement>) =>{
-        setPassword(event.target.value);
+    const handleKeyInput = (event: ChangeEvent<HTMLInputElement>) =>{
+        setKey(event.target.value);
     }
 
     const handleLogin = async () =>{
-        if(email && password) {
-            const isLogged = await auth.signin(email, password);
+        if(key) {
+            const isLogged = await auth.signin(key);
             if (isLogged){
                 navigate('/');
             } else{
-                alert("Não deu certo");
+                alert("Key Invalida");
             }
         }
 
 
     }
-
-
-
     return(
         <div>
             <h2>Página Fechada</h2>
 
             <input 
                 type="text" 
-                value={email} 
-                onChange={handleEmailInput}
-                placeholder="Digite seu Email" 
-            />
-            <input 
-                type="password" 
-                value={password} 
-                onChange={handlePasswordInput}
-                placeholder="Digite sua senha" 
+                value={key} 
+                onChange={handleKeyInput}
+                placeholder="Digite sua Key" 
             />
             <button onClick={handleLogin}>Logar</button>
         </div>

@@ -5,6 +5,10 @@ import { Home } from './pages/Home';
 import { Private } from './pages/Private';
 import { RequireAuth } from './contexts/Auth/RequireAuth';
 import { AuthContext } from './contexts/Auth/AuthContext';
+import { Ligas } from './pages/Ligas';
+import { Times } from './pages/Times';
+import { Equipe } from './pages/Equipe';
+
 
 function App() {
   const auth = useContext(AuthContext);
@@ -35,10 +39,13 @@ function App() {
         <Route 
           path="/private" 
           element={
-          <RequireAuth>
+          /*<RequireAuth>*/
             <Private />
-          </RequireAuth>
+          /*</RequireAuth>*/
         }/>
+        <Route path='/pais/:name' element={<Ligas/>}></Route>
+        <Route path='/times/:liga/:season' element={<Times/>}></Route>
+        <Route path='/equipe/:liga/:season/:time' element={<Equipe/>}></Route>
       </Routes>
     </div>
   );
