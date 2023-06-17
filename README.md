@@ -1,46 +1,39 @@
-# Getting Started with Create React App
+![Logo of the project](https://github.com/Bruno-S-Borges/MeuTime/assets/99930668/31992ccd-cbe1-4c21-aacb-cc546254c83a)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Meu Time
+Aplicação que ao fazer login com a Key, dá acesso a dados de diversos times do mundo inteiro.
+Esta aplicação de um sistema de login que necessita somente da Key (Essa Key você consegue fazendo o cadastro no link https://rapidapi.com/developer/dashboard)
+a aplicação vai usar a sua chave Key cadastrada para chamar a API com as informações, fique atendo pois a versão free da API só permite 100 chamadas.
 
-In the project directory, you can run:
+## Tecnologias
 
-### `npm start`
+Aqui estão as tecnologias utilizadas neste projeto.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* React
+* Typescript
+* Tailwind CSS
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Serviços Usados
 
-### `npm test`
+* Github
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Imagens
 
-### `npm run build`
+![Imagem1](https://github.com/Bruno-S-Borges/MeuTime/assets/99930668/49147896-aff3-4efa-9caf-1499492bcee3)
+![Imagem2](https://github.com/Bruno-S-Borges/MeuTime/assets/99930668/375e618c-2240-4e14-8a5c-b041d695ea55)
+![Imagem3](https://github.com/Bruno-S-Borges/MeuTime/assets/99930668/d98a8647-7372-4e84-b9a1-96381caa7272)
+![Imagem4](https://github.com/Bruno-S-Borges/MeuTime/assets/99930668/c5138525-e99c-4122-bf64-a670e1e798f8)
+![Imagem5](https://github.com/Bruno-S-Borges/MeuTime/assets/99930668/2a316a50-641c-4392-9b3c-cbf9d98fffce)
+![Imagem6](https://github.com/Bruno-S-Borges/MeuTime/assets/99930668/c832774c-56f4-42a5-88b9-655d44f8d2c4)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Links
+  - Link Projeto: https://spotify-tailwind-eryx.vercel.app
+  - Repositorio: https://github.com/Bruno-S-Borges/MeuTime
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  ## Authors
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  * **Bruno Borges** 
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+  Siga o github e junte-se a nós!
+  Obrigado por me visitar!!
