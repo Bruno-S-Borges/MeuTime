@@ -28,7 +28,7 @@ Aqui estão as tecnologias utilizadas neste projeto.
 ![Imagem6](https://github.com/Bruno-S-Borges/MeuTime/assets/99930668/c832774c-56f4-42a5-88b9-655d44f8d2c4)
 
 ## Links
-  - Link Projeto: https://spotify-tailwind-eryx.vercel.app
+  - Link Projeto: https://meu-time-one.vercel.app
   - Repositorio: https://github.com/Bruno-S-Borges/MeuTime
 
   ## Authors
