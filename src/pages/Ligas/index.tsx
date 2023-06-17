@@ -22,7 +22,7 @@ export const Ligas =() =>{
 
     return(
         <div>
-            <div>Ligas</div>
+            <h2 className="text-white text-5xl font-bold">Selecione a Liga e a Temporada</h2>
             <div className="grid grid-cols-6 gap-8 px-20 py-10">
                 {ligas && ligas.map((liga) =><CardLigas key={liga.league.name} liga={liga}/>)}
             </div>

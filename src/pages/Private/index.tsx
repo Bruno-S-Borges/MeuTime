@@ -21,7 +21,7 @@ export const Private =() =>{
 
     return(
         <div>
-            <h2 className="text-red-500">Escolha o País</h2>
+            <h2 className="text-white text-5xl font-bold">Selecione o País</h2>
             <div className="grid grid-cols-6 gap-8 px-20 py-10">
                 {paises && paises.map((pais) =><CardPaises key={pais.name} pais={pais}/>)}
             </div>

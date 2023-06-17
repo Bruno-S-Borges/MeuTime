@@ -20,16 +20,14 @@ function App() {
 
 
   return (
-    <div className="App">
-      <header>
-        <h1>Header do site</h1>
-        <nav>
-          <Link to="/">Home</Link>
+    <div className="App bg-emerald-900 h-full">
+      <header className='bg-white'>
+        <nav className='flex justify-center gap-4 p-4'>
+          <Link className='py-2 px-6 bg-emerald-900 text-white rounded hover:bg-emerald-950' to="/">Home</Link>
           <br />
-          <Link to="/private">Página Privada</Link>
+          <Link className='py-2 px-6 bg-emerald-900 text-white rounded hover:bg-emerald-950' to="/private">Acessar</Link>
           <br />
-          {auth.user && <button onClick={handleLogout}>Sair</button>}
-
+          {auth.user && <button className='py-2 px-6 bg-red-900 text-white rounded hover:bg-red-950' onClick={handleLogout}>Sair</button>}
         </nav>
       </header>
       <hr />
@@ -39,9 +37,9 @@ function App() {
         <Route 
           path="/private" 
           element={
-          /*<RequireAuth>*/
+          <RequireAuth>
             <Private />
-          /*</RequireAuth>*/
+          </RequireAuth>
         }/>
         <Route path='/pais/:name' element={<Ligas/>}></Route>
         <Route path='/times/:liga/:season' element={<Times/>}></Route>

@@ -16,7 +16,7 @@ export const Login =() =>{
         if(key) {
             const isLogged = await auth.signin(key);
             if (isLogged){
-                navigate('/');
+                navigate('/private');
             } else{
                 alert("Key Invalida");
             }
@@ -26,15 +26,20 @@ export const Login =() =>{
     }
     return(
         <div>
-            <h2>Página Fechada</h2>
+            <div className="mt-56 pb-96">
+                <h2 className="text-white text-5xl font-bold m-4">Fazer Login</h2>
 
-            <input 
-                type="text" 
-                value={key} 
-                onChange={handleKeyInput}
-                placeholder="Digite sua Key" 
-            />
-            <button onClick={handleLogin}>Logar</button>
+                <div className="flex flex-col items-center justify-center gap-4 mt-12">
+                    <input className="text-3xl px-6 py-4 w-96"
+                    type="text" 
+                    value={key} 
+                    onChange={handleKeyInput}
+                    placeholder="Digite sua Key" 
+                    />
+                    <button className='py-2 px-6 bg-white text-emerald-950 rounded hover:bg-green-500' onClick={handleLogin}>Logar</button>
+                    <p>Não tem uma Key? <span> <a className="hover:text-white" href="https://www.api-football.com/documentation-v3">Crie a sua aqui!</a></span></p>
+                </div>
+            </div>
         </div>
     )
 }

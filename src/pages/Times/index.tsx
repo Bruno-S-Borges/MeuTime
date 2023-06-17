@@ -23,7 +23,7 @@ export const Times =() =>{
 
     return(
         <div>
-            <h2 className="text-red-500">Times</h2>
+            <h2 className="text-white text-5xl font-bold">Selecione o Time</h2>
             
             <div className="grid grid-cols-6 gap-8 px-20 py-10">
                 {times && times.map((time) =>

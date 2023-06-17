@@ -35,32 +35,62 @@ export const Equipe =() =>{
     },[]);
 
     return(
-        <div >
+        <div>
             {statistics != 0?
             <div>
                 <HeaderJogadores statistics={statistics}></HeaderJogadores>
             
-                <div className="flex mx-48">
-                    <div className="flex flex-col">
-                        <h1 className="text-3xl font-bold">JOGADORES</h1>
-                        <div className="max-h-96 max-w-md overflow-y-auto">
-                        {players && players.map((player) =><CardJogadores key={player.player.id} player={player}/>)}
+                <div className="flex justify-around mx-48 mt-8 pb-44">
+                    <div className="flex flex-col gap-4">
+                        <h1 className="text-4xl font-bold">JOGADORES</h1>
+                        {players != 0?
+                        <div>
+                            <div className="max-h-128 border max-w-md overflow-y-auto bg-white">
+                            {players && players.map((player) =><CardJogadores key={player.player.id} player={player}/>)}
+                            </div>
+                        </div>:
+                        <div>
+                            <p>Não Possui informações dos Jogadores</p>
                         </div>
+                        }                       
                     </div>
                     
                     
-                    <div>
-                        <div className="flex gap-8">
-                            <CardEstatisticas statistics={statistics && statistics.fixtures.wins.total} valor = 'Vitórias'></CardEstatisticas>
-                            <CardEstatisticas statistics={statistics && statistics.fixtures.loses.total} valor = 'Derrotas'></CardEstatisticas>
-                            <CardEstatisticas statistics={statistics && statistics.fixtures.draws.total} valor = 'Empates'></CardEstatisticas>
-                            <CardEstatisticas statistics={statistics && statistics.fixtures.played.total} valor = 'Total de Jogos'></CardEstatisticas>
+                    <div className="flex flex-col items-center gap-4">
+                        <div className="flex flex-col gap-4">
+                            <h1 className="text-4xl font-bold">PARTIDAS</h1>
+                            <div className="flex gap-8">
+                                <CardEstatisticas statistics={statistics && statistics.fixtures.wins.total} valor = 'Vitórias'></CardEstatisticas>
+                                <CardEstatisticas statistics={statistics && statistics.fixtures.loses.total} valor = 'Derrotas'></CardEstatisticas>
+                                <CardEstatisticas statistics={statistics && statistics.fixtures.draws.total} valor = 'Empates'></CardEstatisticas>
+                                <CardEstatisticas statistics={statistics && statistics.fixtures.played.total} valor = 'Total de Jogos'></CardEstatisticas>
+                            </div>
+                            
                         </div>
-                        <div className="flex gap-8">
-                            <CardEstatisticas statistics={statistics.goals.for.total.total} valor = 'Gols Marcados'></CardEstatisticas>
-                            <CardEstatisticas statistics={statistics.goals.against.total.total} valor = 'Gols Sofridos'></CardEstatisticas>
+
+                        <div className="flex flex-col gap-4">
+                            <h1 className="text-4xl font-bold">GOLS</h1>
+                            <div className="flex gap-8">
+                                <CardEstatisticas statistics={statistics.goals.for.total.total} valor = 'Gols Marcados'></CardEstatisticas>
+                                <CardEstatisticas statistics={statistics.goals.against.total.total} valor = 'Gols Sofridos'></CardEstatisticas>
+                            </div>
+                            
                         </div>
-                            <CardEstatisticas statistics={statistics && statistics.lineups[0].formation} valor = 'Formação mais Jogada'></CardEstatisticas>
+
+                        {statistics.lineups != 0?
+
+                        <div>
+                            <div className="flex flex-col gap-4">
+                                <h1 className="text-4xl font-bold">FORMAÇÃO</h1>
+                                <div className="flex gap-8">
+                                    <CardEstatisticas statistics={statistics && statistics.lineups[0].formation} valor = 'Formação mais Jogada'></CardEstatisticas>
+                                </div>
+                            </div>
+                        </div>:
+                        <div>
+                            <p>Sem Valor de Formação</p>
+                        </div> 
+                        }                      
                     </div>
                 </div>
             </div>:
